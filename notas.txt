@@ -1,0 +1,3 @@
+Foundation esta diseñado como mobile first
+A partir de Foundatio 6.4 el sistema de grilla default es Grid XY que se basa en Flexbox.
+El maximo de columnas (cell) es de 12.

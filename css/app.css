@@ -1,0 +1,18 @@
+body{
+  background: #ee3f54;
+  
+}
+
+body, h1, h2, h3, h4, h5, h6, button{
+  font-family: 'Bree Serif', serif;
+}
+
+#social-container{
+  background: #1c3636;
+}
+
+#logo-container .callout{
+  background: #ee3f54;
+  color: white;
+}
+
