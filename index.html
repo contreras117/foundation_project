@@ -91,86 +91,168 @@
         <h3 class="text-center">Lineup</h3>
         <ul id="lineup-tabs" class="tabs text-center" data-tabs> <!-- El atributo data-tabs es necesario para trabajar con pestañas en Foundation. Para poder centrar las pestañas tambien hay que quitarles el float.-->
           <li class="tabs-title is-active"><a href="#panel-viernes">Viernes</a></li> <!-- href debe tener # + el id del panel que se va mostrar al estar activa esa pestaña. Con la clase "is-active se elige la pestaña que esta activa." -->
-          <li class="tabs-title"><a href="#panel-sabado">Sábado</a></li>
-          <li class="tabs-title"><a href="#panel-domingo">Domingo</a></li>
+          <li class="tabs-title"><a data-tabs-target="panel-sabado" href="#panel-sabado">Sábado</a></li>
+          <li class="tabs-title"><a data-tabs-target="panel-domingo" href="#panel-domingo">Domingo</a></li>
         </ul> 
-        <div class="tabs-content" data-tabs-content="lineup-tabs"> <!-- data-tabs-content debe tener como valor el ide del ul que servira como su menu. -->
+        <div class="tabs-content" data-tabs-content="lineup-tabs"> <!-- data-tabs-content debe tener como valor el id del ul que servira como su menu. -->
           <div class="tabs-panel is-active" id="panel-viernes"> <!-- Con la clase is-active se elige el panel que esta activo por defecto -->
-            
-            <div class="grid-x">
-              <div class="small-12 medium-6 cell">
-                <div class="orbit-container"> <!-- Cambiar la altura para mostrar la imagen -->
-                  <div class="orbit-slide">
-                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
-                    <figcaption class="orbit-caption">AC/DC</figcaption>
-                  </div>
-                </div>                
-              </div>
-              <!-- <div class="small-12 medium-6 cell">
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
-                    <figcaption class="orbit-caption">AC/DC</figcaption>
-                  </div>
-                </div>                
-              </div>
-              <div class="small-12 medium-6 cell">
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
-                    <figcaption class="orbit-caption">AC/DC</figcaption>
-                  </div>
+            <div class="grid-x grid-margin-x grid-margin-y align-justify">
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/acdc.jpg" alt="AC/DC" />
+                  <figcaption class="orbit-caption">
+                    AC/DC
+                  </figcaption>
                 </div>
               </div>
-              <div class="small-12 medium-6 cell">
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
-                    <figcaption class="orbit-caption">AC/DC</figcaption>
-                  </div>
-                </div>                
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/ramones.jpg" alt="Ramones" />
+                  <figcaption class="orbit-caption">
+                    Ramones
+                  </figcaption>
+                </div>
               </div>
-              <div class="small-12 medium-6 cell">
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
-                    <figcaption class="orbit-caption">AC/DC</figcaption>
-                  </div>
-                </div>                
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/sabath.jpeg" alt="Black Sabath" />
+                  <figcaption class="orbit-caption">
+                    Black Sabath
+                  </figcaption>
+                </div>
               </div>
-              <div class="small-12 medium-6 cell">
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
-                    <figcaption class="orbit-caption">AC/DC</figcaption>
-                  </div>
-                </div>                
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/metalica.jpg" alt="Metalica" />
+                  <figcaption class="orbit-caption">
+                      Metalica
+                  </figcaption>
+                </div>
               </div>
-              <div class="small-12 medium-6 cell">
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
-                    <figcaption class="orbit-caption">AC/DC</figcaption>
-                  </div>
-                </div>                
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/zepelin.jpg" alt="Led Zepelin" />
+                  <figcaption class="orbit-caption">
+                    Led Zepelin
+                  </figcaption>
+                </div>
               </div>
-              <div class="small-12 medium-6 cell">
-                <div class="orbit-container">
-                  <div class="orbit-slide">
-                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
-                    <figcaption class="orbit-caption"></figcaption>
-                  </div>
-                </div>                
-              </div> -->
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/guns.jpg" alt="Guns n Roses" />
+                  <figcaption class="orbit-caption">
+                    Guns n Roses
+                  </figcaption>
+                </div>
+              </div>                                                        
             </div>
           </div>
           <div class="tabs-panel" id="panel-sabado">
-            El contenido del panel del Sábado.
+            <div class="grid-x grid-margin-x grid-margin-y align-justify">
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/beatles.jpg" alt="The Beatles" />
+                  <figcaption class="orbit-caption">
+                    The Beatles
+                  </figcaption>
+                </div>
+              </div>
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/beatles.jpg" alt="The Beatles" />
+                  <figcaption class="orbit-caption">
+                    The Beatles
+                  </figcaption>
+                </div>
+              </div>
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/beatles.jpg" alt="The Beatles" />
+                  <figcaption class="orbit-caption">
+                    The Beatles
+                  </figcaption>
+                </div>
+              </div>
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/beatles.jpg" alt="The Beatles" />
+                  <figcaption class="orbit-caption">
+                    The Beatles
+                  </figcaption>
+                </div>
+              </div>
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/beatles.jpg" alt="The Beatles" />
+                  <figcaption class="orbit-caption">
+                    The Beatles
+                  </figcaption>
+                </div>
+              </div>
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/beatles.jpg" alt="The Beatles" />
+                  <figcaption class="orbit-caption">
+                    The Beatles
+                  </figcaption>
+                </div>
+              </div>                                                        
+            </div>
           </div>
           <div class="tabs-panel" id="panel-domingo">
-            El contenido del panel del Domingo.
+            <div class="grid-x grid-margin-x grid-margin-y align-justify">
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/queen.jpg" alt="AC/DC" />
+                  <figcaption class="orbit-caption">
+                    Queen
+                  </figcaption>
+                </div>
+              </div>
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/queen.jpg" alt="Ramones" />
+                  <figcaption class="orbit-caption">
+                    Queen
+                  </figcaption>
+                </div>
+              </div>
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/queen.jpg" alt="Black Sabath" />
+                  <figcaption class="orbit-caption">
+                    Queen
+                  </figcaption>
+                </div>
+              </div>
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/queen.jpg" alt="Deep Purple" />
+                  <figcaption class="orbit-caption">
+                    Queen
+                  </figcaption>
+                </div>
+              </div>
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/queen.jpg" alt="Led Zepelin" />
+                  <figcaption class="orbit-caption">
+                    Queen
+                  </figcaption>
+                </div>
+              </div>
+              <div class="cell small-12 medium-6">
+                <div class="orbit">
+                  <img src="img/queen.jpg" alt="Queen" />
+                  <figcaption class="orbit-caption">
+                    Queen
+                  </figcaption>
+                </div>
+              </div>                                                        
+            </div>
           </div>
         </div>
+
       </section>
     <!-- /Lineup -->
 
