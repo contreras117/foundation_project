@@ -1,10 +1,28 @@
 body{
   background: #ee3f54;
-  
 }
 
-body, h1, h2, h3, h4, h5, h6, button{
+body, h1, h2, h3, h4, h5, h6, button, a{
   font-family: 'Bree Serif', serif;
+  color: white;
+}
+
+.callout{
+  margin-bottom: 0;
+}
+
+.submenu-container{
+  border: none;
+}
+
+.tabs-title{
+  display: inline-block;
+  float: none;
+}
+
+.tabs-content{
+  background: inherit;
+  border: none;
 }
 
 #social-container{
@@ -12,7 +30,59 @@ body, h1, h2, h3, h4, h5, h6, button{
 }
 
 #logo-container .callout{
-  background: #ee3f54;
+  background: inherit;
+  margin-bottom: 0;
+}
+
+#menu-container,
+.submenu-container{
+  background: #48a19d;
+}
+
+
+#menu-container li a:hover{
+  color: #f6e15f;
+}
+
+#tickets-action .callout{
+  background: #5e7eb7;
+}
+
+#tickets-action .callout button{
+  border-color: white;
   color: white;
+}
+
+#lineup-container{
+  padding: 1em 0;
+}
+
+#lineup-container,
+#lineup-tabs,
+#lineup-container .tabs-content{
+  background: #9676af;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+#lineup-container .tabs-title a{
+  color: #a7fffb;
+  font-size: 18px;
+}
+
+#lineup-container .tabs-title a:hover,
+#lineup-container .tabs-title.is-active a{
+  background: inherit;
+  color: white;
+  outline: none;
+}
+
+.grid-x{
+  border: 1px solid red;
+}
+
+.cell{
+  border: 1px solid blue;
 }
 

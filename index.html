@@ -13,35 +13,166 @@
   <body>
 
     <!-- Social -->
-    <section id="social-container">
-      <div class="grid-x align-center text-center">
-        <div class="cell small-1">
-          <a href="#" target="_blank">
-            <i class="fi-social-facebook"></i>
-          </a>
+      <section id="social-container">
+        <div class="grid-x align-center text-center">
+          <div class="cell small-1">
+            <a href="#" target="_blank">
+              <i class="fi-social-facebook"></i>
+            </a>
+          </div>
+          <div class="cell small-1">
+            <a href="#" target="_blank" >
+              <i class="fi-social-twitter"></i>
+            </a>
+          </div>
+          <div class="cell small-1">
+            <a href="#" target="_blank">
+              <i class="fi-social-instagram"></i>
+            </a>
+          </div>
         </div>
-        <div class="cell small-1">
-          <a href="#" target="_blank" >
-            <i class="fi-social-twitter"></i>
-          </a>
-        </div>
-        <div class="cell small-1">
-          <a href="#" target="_blank">
-            <i class="fi-social-instagram"></i>
-          </a>
-        </div>
-      </div>
-    </section>
+      </section>
     <!-- /Social -->
 
     <!-- Logo -->
-    <section id="logo-container">
-      <div class="callout text-center">
-        <h1>Platzipalooza</h1>
-      </div>
-    </section>
+      <section id="logo-container">
+        <div class="callout text-center">
+          <h1>Platzipalooza</h1>
+        </div>
+      </section>
+    <!-- /Logo -->
 
-    <!--/Logo -->
+    <!-- Menu -->
+      <section id="menu-container">
+        <nav> <!-- Etiqueta colocada con fines de SEO solamente -->
+          <ul class="menu icon-top dropdown align-spaced" data-dropdown-menu> <!-- Puedo agregar las clases vertical o simple para cambiar el aspecto del menu. El atributo data-dropdown-menu es necesario para la implementacion de js en los submenus. -->
+            <li>
+              <a href="#"><i class="fi-ticket"></i> Tickets</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fi-calendar"></i> 
+                Lineup
+              </a>
+              <ul class="menu submenu-container icon-left">
+                <li><a href="#"><i class="fi-star"></i> Viernes</a></li>
+                <li><a href="#"><i class="fi-star"></i> Sábado</a></li>
+                <li><a href="#"><i class="fi-star"></i> Domingo</a></li>
+              </ul>
+            </li>
+            <li class="active">
+              <a href="#"><i class="fi-info"></i> Info</a>
+            </li>
+            <li>
+              <a href="#"><i class="fi-at-sign"></i> Suscríbete</a>
+            </li>
+          </ul>
+        </nav>
+        
+      </section>
+    <!-- /Menu -->
+
+    <!-- Tickets -->
+      <section id="tickets-action">
+        <div class="callout large text-center">
+          <a href="#">
+            <!-- Por default tiene el color primario definido en foundation. 
+              Con las clases warning, allert, success se puede cambiar tambien el color.
+              Con la clase hollow se invierte la distribucion de colores entre el background y el borde y el color. 
+              Se puede asignar el tamaño de los botones con las clases tiny, small, medium y large.-->
+            <button class="button hollow large">Comprar boletos</button>
+          </a>
+        </div>
+      </section>
+    <!-- /Tickets -->
+
+    <!-- Lineup -->
+      <section id="lineup-container">
+        <h3 class="text-center">Lineup</h3>
+        <ul id="lineup-tabs" class="tabs text-center" data-tabs> <!-- El atributo data-tabs es necesario para trabajar con pestañas en Foundation. Para poder centrar las pestañas tambien hay que quitarles el float.-->
+          <li class="tabs-title is-active"><a href="#panel-viernes">Viernes</a></li> <!-- href debe tener # + el id del panel que se va mostrar al estar activa esa pestaña. Con la clase "is-active se elige la pestaña que esta activa." -->
+          <li class="tabs-title"><a href="#panel-sabado">Sábado</a></li>
+          <li class="tabs-title"><a href="#panel-domingo">Domingo</a></li>
+        </ul> 
+        <div class="tabs-content" data-tabs-content="lineup-tabs"> <!-- data-tabs-content debe tener como valor el ide del ul que servira como su menu. -->
+          <div class="tabs-panel is-active" id="panel-viernes"> <!-- Con la clase is-active se elige el panel que esta activo por defecto -->
+            
+            <div class="grid-x">
+              <div class="small-12 medium-6 cell">
+                <div class="orbit-container"> <!-- Cambiar la altura para mostrar la imagen -->
+                  <div class="orbit-slide">
+                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
+                    <figcaption class="orbit-caption">AC/DC</figcaption>
+                  </div>
+                </div>                
+              </div>
+              <!-- <div class="small-12 medium-6 cell">
+                <div class="orbit-container">
+                  <div class="orbit-slide">
+                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
+                    <figcaption class="orbit-caption">AC/DC</figcaption>
+                  </div>
+                </div>                
+              </div>
+              <div class="small-12 medium-6 cell">
+                <div class="orbit-container">
+                  <div class="orbit-slide">
+                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
+                    <figcaption class="orbit-caption">AC/DC</figcaption>
+                  </div>
+                </div>
+              </div>
+              <div class="small-12 medium-6 cell">
+                <div class="orbit-container">
+                  <div class="orbit-slide">
+                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
+                    <figcaption class="orbit-caption">AC/DC</figcaption>
+                  </div>
+                </div>                
+              </div>
+              <div class="small-12 medium-6 cell">
+                <div class="orbit-container">
+                  <div class="orbit-slide">
+                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
+                    <figcaption class="orbit-caption">AC/DC</figcaption>
+                  </div>
+                </div>                
+              </div>
+              <div class="small-12 medium-6 cell">
+                <div class="orbit-container">
+                  <div class="orbit-slide">
+                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
+                    <figcaption class="orbit-caption">AC/DC</figcaption>
+                  </div>
+                </div>                
+              </div>
+              <div class="small-12 medium-6 cell">
+                <div class="orbit-container">
+                  <div class="orbit-slide">
+                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
+                    <figcaption class="orbit-caption">AC/DC</figcaption>
+                  </div>
+                </div>                
+              </div>
+              <div class="small-12 medium-6 cell">
+                <div class="orbit-container">
+                  <div class="orbit-slide">
+                    <img src="img/acdc.jpg" alt="AC/DC" class="orbit-image">
+                    <figcaption class="orbit-caption"></figcaption>
+                  </div>
+                </div>                
+              </div> -->
+            </div>
+          </div>
+          <div class="tabs-panel" id="panel-sabado">
+            El contenido del panel del Sábado.
+          </div>
+          <div class="tabs-panel" id="panel-domingo">
+            El contenido del panel del Domingo.
+          </div>
+        </div>
+      </section>
+    <!-- /Lineup -->
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>

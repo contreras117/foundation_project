@@ -1902,6 +1902,17 @@ a.button:hover, a.button:focus {
   .menu.icon-top a, .menu.icon-right a, .menu.icon-bottom a, .menu.icon-left a {
     display: -ms-flexbox;
     display: flex; }
+  .menu.icon-top li a {
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap; }
+    .menu.icon-top li a img,
+    .menu.icon-top li a i,
+    .menu.icon-top li a svg {
+      -ms-flex-item-align: stretch;
+          -ms-grid-row-align: stretch;
+          align-self: stretch;
+      margin-bottom: 0.25rem;
+      text-align: center; }
   .menu.icon-left li a {
     -ms-flex-flow: row nowrap;
         flex-flow: row nowrap; }
@@ -1916,17 +1927,6 @@ a.button:hover, a.button:focus {
     .menu.icon-right li a i,
     .menu.icon-right li a svg {
       margin-left: 0.25rem; }
-  .menu.icon-top li a {
-    -ms-flex-flow: column nowrap;
-        flex-flow: column nowrap; }
-    .menu.icon-top li a img,
-    .menu.icon-top li a i,
-    .menu.icon-top li a svg {
-      -ms-flex-item-align: stretch;
-          -ms-grid-row-align: stretch;
-          align-self: stretch;
-      margin-bottom: 0.25rem;
-      text-align: center; }
   .menu.icon-bottom li a {
     -ms-flex-flow: column nowrap;
         flex-flow: column nowrap; }
