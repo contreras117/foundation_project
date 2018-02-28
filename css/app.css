@@ -86,3 +86,11 @@ body, h1, h2, h3, h4, h5, h6, button, a{
   text-align: right;
 }
 
+#tickets-container {
+  padding: 1em 0;
+  background: #f6e15f;
+}
+
+#tickets-container h3{
+  color: #161742;
+}

@@ -1,0 +1,47 @@
+/* Codigo copiado de https://foundation.zurb.com/building-blocks
+ Con algunas modificaciones para adaptarlo */
+
+.pricing-table {
+  background-color: inherit;
+  border: solid 1px #161742;
+  width: 100%;
+  text-align: center;
+  list-style-type: none;
+  font-family: 'Ravi Prakash', cursive;
+}
+
+.pricing-table li {
+  border-bottom: dotted 1px #cacaca;
+  padding: 0.875rem 1.125rem;
+  font-size: 20px;
+}
+
+.pricing-table li:last-child {
+  border-bottom: 0;
+}
+
+.pricing-table .title {
+  background-color: #0a0a0a;
+  color: #fefefe;
+  border-bottom: 0;
+  font-size: 2rem;
+}
+
+.pricing-table .price {
+  background-color: #e6e6e6;
+  font-size: 2rem;
+  border-bottom: 0;
+}
+
+.pricing-table .description {
+  color: #8a8a8a;
+  font-size: 20px;
+}
+
+.pricing-table :last-child {
+  margin-bottom: 0;
+}
+
+.pricing-table .button{
+  font-family: 'Bree Serif', serif;
+}
