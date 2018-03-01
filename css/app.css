@@ -94,3 +94,12 @@ body, h1, h2, h3, h4, h5, h6, button, a{
 #tickets-container h3{
   color: #161742;
 }
+
+#info-container{
+  background: #161742;
+  padding: 1em 0;
+}
+
+#info-container .info-map iframe{
+  width: 100%;
+}
