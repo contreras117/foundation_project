@@ -298,6 +298,41 @@
       </section>
     <!-- /Compra de boletos -->
 
+    <!-- Suscripción -->   
+      <section id="suscribe-container">
+        <h3 class="text-center">
+          Suscríbete
+        </h3>
+        <h4 class="text-center">
+          <small>
+            Y recibe las últimas novedades del concierto
+          </small>
+        </h4>
+        <form action="" method="" novalidate data-abide> <!-- novalidate es un atributo para que no aparezca el mensaje por defecto del input. data-abide es un atributo para elplugin de foundatio que permite validar los formularios -->
+          <div class="grid-x align-center">
+            <div class="cell small-12 medium-8 error-container text-center" data-abide-error> <!-- data-abide-error es el atributo para indicar el elemento que se mostrara al ocurrir un error de validacion -->
+              <p><i class="fi-alert"></i> Ingresó un correo electrónico no válido</p>
+            </div>
+            <div class="cell small-12 medium-6">
+              <div class="input-group"> <!-- input-group es una clase de foundation para colocar los elementos de formulario-->
+                <span class="input-group-label">
+                  <i class="fi-mail"></i>
+                </span>
+                <input type="email" name="email" class="input-group-field" placeholder="tu@correo.com" required>
+                <div class="input-group-button">
+                  <input type="submit" class="button" value="Suscribirse!">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </section>
+    <!-- /Suscripción -->
+
+
+
+
     <!-- Información -->
       <section id="info-container">
         <h3 class="text-center">

@@ -103,3 +103,16 @@ body, h1, h2, h3, h4, h5, h6, button, a{
 #info-container .info-map iframe{
   width: 100%;
 }
+
+#suscribe-container{
+  background: #ee3f54;
+  padding: 1em 0;
+}
+
+#suscribe-container h4 small{
+  color: #ffcddc;
+}
+
+.error-container{
+  display: none;
+}
