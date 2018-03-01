@@ -44,14 +44,40 @@
     <!-- /Logo -->
 
     <!-- Menu -->
-      <section id="menu-container">
-        <nav> <!-- Etiqueta colocada con fines de SEO solamente -->
+      <section id="scrollSticky" data-sticky-container>
+        <div class="data-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="menu-container">
+          <nav id="menu-container"data-magellan> <!-- data-magellan es un atributo necesario para hacer la transicion suave a las diferentes secciones desde el menu. -->
+            <ul class="menu icon-top dropdown align-spaced" data-dropdown-menu> <!-- Puedo agregar las clases vertical o simple para cambiar el aspecto del menu. El atributo data-dropdown-menu es necesario para la implementacion de js en los submenus. -->
+              <li>
+                <a href="#tickets-container"><i class="fi-ticket"></i> Tickets</a>
+              </li>
+              <li>
+                <a href="#lineup-container">
+                  <i class="fi-calendar"></i> 
+                  Lineup
+                </a>
+                <ul class="menu submenu-container icon-left">
+                  <li><a href="#"><i class="fi-star"></i> Viernes</a></li>
+                  <li><a href="#"><i class="fi-star"></i> Sábado</a></li>
+                  <li><a href="#"><i class="fi-star"></i> Domingo</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#info-container"><i class="fi-info"></i> Info</a>
+              </li>
+              <li>
+                <a href="#suscribe-container"><i class="fi-at-sign"></i> Suscríbete</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <nav id="menu-container" class="data-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="menu-container" data-magellan> <!-- data-magellan es un atributo necesario para hacer la transicion suave a las diferentes secciones desde el menu. -->
           <ul class="menu icon-top dropdown align-spaced" data-dropdown-menu> <!-- Puedo agregar las clases vertical o simple para cambiar el aspecto del menu. El atributo data-dropdown-menu es necesario para la implementacion de js en los submenus. -->
             <li>
-              <a href="#"><i class="fi-ticket"></i> Tickets</a>
+              <a href="#tickets-container"><i class="fi-ticket"></i> Tickets</a>
             </li>
             <li>
-              <a href="#">
+              <a href="#lineup-container">
                 <i class="fi-calendar"></i> 
                 Lineup
               </a>
@@ -61,11 +87,11 @@
                 <li><a href="#"><i class="fi-star"></i> Domingo</a></li>
               </ul>
             </li>
-            <li class="active">
-              <a href="#"><i class="fi-info"></i> Info</a>
+            <li>
+              <a href="#info-container"><i class="fi-info"></i> Info</a>
             </li>
             <li>
-              <a href="#"><i class="fi-at-sign"></i> Suscríbete</a>
+              <a href="#suscribe-container"><i class="fi-at-sign"></i> Suscríbete</a>
             </li>
           </ul>
         </nav>
@@ -88,7 +114,7 @@
     <!-- /Tickets -->
 
     <!-- Lineup -->
-      <section id="lineup-container">
+      <section id="lineup-container" data-magellan-target="lineup-container"> <!-- data-magellan-target es un atributo para la transicion suave. Su valor debe ser igual al id de la seccion objetivo. -->
         <h3 class="text-center">Lineup</h3>
         <ul id="lineup-tabs" class="tabs text-center" data-tabs> <!-- El atributo data-tabs es necesario para trabajar con pestañas en Foundation. Para poder centrar las pestañas tambien hay que quitarles el float.-->
           <li class="tabs-title is-active"><a href="#panel-viernes">Viernes</a></li> <!-- href debe tener # + el id del panel que se va mostrar al estar activa esa pestaña. Con la clase "is-active se elige la pestaña que esta activa." -->
@@ -258,7 +284,7 @@
     <!-- /Lineup -->
 
     <!-- Compra de boletos -->
-      <section id="tickets-container">
+      <section id="tickets-container" data-magellan-target="tickets-container">
         <h3 class="text-center">Comprar boletos</h3>
         <div class="grid-x grid-padding-x" data-equalizer data-equalize-on="small"> <!-- El atributo data-equalizer sirve para igualer el tamaño los ementos hijos indicados con la clase data-equalizer-watch. data-equalize-on sirve para indicar a partir de que tamaño se reliaza la igualacion. -->
           <div class="cell small-10 small-offset-1 medium-6 medium-offset-3"> <!-- La clase size-offset-# recorre la columna la cantidad de espacios indicados -->
@@ -299,7 +325,7 @@
     <!-- /Compra de boletos -->
 
     <!-- Suscripción -->   
-      <section id="suscribe-container">
+      <section id="suscribe-container" data-magellan-target="suscribe-container">
         <h3 class="text-center">
           Suscríbete
         </h3>
@@ -330,11 +356,8 @@
       </section>
     <!-- /Suscripción -->
 
-
-
-
     <!-- Información -->
-      <section id="info-container">
+      <section id="info-container" data-magellan-target="info-container">
         <h3 class="text-center">
           Información
         </h3>

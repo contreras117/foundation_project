@@ -7,6 +7,10 @@ body, h1, h2, h3, h4, h5, h6, button, a{
   color: white;
 }
 
+a:focus{
+  color:white;
+}
+
 .callout{
   margin-bottom: 0;
 }
@@ -115,4 +119,8 @@ body, h1, h2, h3, h4, h5, h6, button, a{
 
 .error-container{
   display: none;
+}
+
+.data-sticky{
+  z-index: 2;
 }
