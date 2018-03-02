@@ -33,6 +33,10 @@ a:focus{
   background: #1c3636;
 }
 
+#social-container i{
+  font-size: 1.5em;
+}
+
 #logo-container .callout{
   background: inherit;
   margin-bottom: 0;
@@ -43,9 +47,27 @@ a:focus{
   background: #48a19d;
 }
 
+#menu-container li a,
+#offCanvas li a{
+  text-transform: uppercase;
+  outline: none;
+}
 
-#menu-container li a:hover{
+#menu-container li a:hover,
+#offCanvas li a:hover{
   color: #f6e15f;
+}
+
+#offCanvas .drilldown a{
+  background:black;
+}
+
+#offCanvas .drilldown .is-drilldown-submenu-parent > a::after {
+  border-left-color: white;
+}
+
+#offCanvas .drilldown .js-drilldown-back > a::before{
+  border-right-color: white;
 }
 
 #tickets-action .callout{
@@ -82,8 +104,17 @@ a:focus{
   outline: none;
 }
 
+#lineup-container .orbit{
+  overflow: hidden;
+}
+
 #lineup-container img{
   width: 100%;
+  transition: .3s
+}
+
+#lineup-container img:hover{
+  transform: scale(1.2);
 }
 
 #lineup-container .cell:nth-child(odd) .orbit-caption{
@@ -123,4 +154,8 @@ a:focus{
 
 .data-sticky{
   z-index: 2;
+}
+
+#offCanvas{
+  background: black;
 }

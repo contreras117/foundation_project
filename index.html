@@ -13,372 +13,391 @@
   </head>
   <body>
 
-    <!-- Social -->
-      <section id="social-container">
-        <div class="grid-x align-center text-center">
-          <div class="cell small-1">
-            <a href="#" target="_blank">
-              <i class="fi-social-facebook"></i>
-            </a>
-          </div>
-          <div class="cell small-1">
-            <a href="#" target="_blank" >
-              <i class="fi-social-twitter"></i>
-            </a>
-          </div>
-          <div class="cell small-1">
-            <a href="#" target="_blank">
-              <i class="fi-social-instagram"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-    <!-- /Social -->
-
-    <!-- Logo -->
-      <section id="logo-container">
-        <div class="callout text-center">
-          <h1>Platzipalooza</h1>
-        </div>
-      </section>
-    <!-- /Logo -->
-
-    <!-- Menu -->
-      <section id="scrollSticky" data-sticky-container>
-        <div class="data-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="menu-container">
-          <nav id="menu-container"data-magellan> <!-- data-magellan es un atributo necesario para hacer la transicion suave a las diferentes secciones desde el menu. -->
-            <ul class="menu icon-top dropdown align-spaced" data-dropdown-menu> <!-- Puedo agregar las clases vertical o simple para cambiar el aspecto del menu. El atributo data-dropdown-menu es necesario para la implementacion de js en los submenus. -->
-              <li>
-                <a href="#tickets-container"><i class="fi-ticket"></i> Tickets</a>
-              </li>
-              <li>
-                <a href="#lineup-container">
-                  <i class="fi-calendar"></i> 
-                  Lineup
-                </a>
-                <ul class="menu submenu-container icon-left">
-                  <li><a href="#"><i class="fi-star"></i> Viernes</a></li>
-                  <li><a href="#"><i class="fi-star"></i> Sábado</a></li>
-                  <li><a href="#"><i class="fi-star"></i> Domingo</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#info-container"><i class="fi-info"></i> Info</a>
-              </li>
-              <li>
-                <a href="#suscribe-container"><i class="fi-at-sign"></i> Suscríbete</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <nav id="menu-container" class="data-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="menu-container" data-magellan> <!-- data-magellan es un atributo necesario para hacer la transicion suave a las diferentes secciones desde el menu. -->
-          <ul class="menu icon-top dropdown align-spaced" data-dropdown-menu> <!-- Puedo agregar las clases vertical o simple para cambiar el aspecto del menu. El atributo data-dropdown-menu es necesario para la implementacion de js en los submenus. -->
-            <li>
-              <a href="#tickets-container"><i class="fi-ticket"></i> Tickets</a>
-            </li>
-            <li>
-              <a href="#lineup-container">
-                <i class="fi-calendar"></i> 
-                Lineup
-              </a>
-              <ul class="menu submenu-container icon-left">
-                <li><a href="#"><i class="fi-star"></i> Viernes</a></li>
-                <li><a href="#"><i class="fi-star"></i> Sábado</a></li>
-                <li><a href="#"><i class="fi-star"></i> Domingo</a></li>
+    <div class="off-canvas-wrapper"> <!-- div wrapper necesario para aplicar contenido off canvas con foundation -->
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper> <!-- div contenedor necesario para aplicar contenido off canvas con foundation -->
+        <div id="offCanvas" class="off-canvas position-left" data-off-canvas> <!-- div donde se coloca el contenido oculto del off canvas. Requiere la clase off-canvas y position-left o position-right. -->
+          <!-- Menu off canvas -->
+            <nav data-magellan>
+              <ul class="menu vertical" data-drilldown> <!-- data-drilldown es un atributo de foundation para implementar elementos ocultos estilo drilldown. Foundation reconoce automaticamente los submenus dentro de este elemento. El texto en ingles "Back" se puede cambiar en el archivo foundation.js-->
+                <li>
+                  <a href="#tickets-container"><i class="fi-ticket"></i> Tickets</a>
+                </li>
+                <li>
+                  <a href="#lineup-container">
+                    <i class="fi-calendar"></i> 
+                    Lineup
+                  </a>
+                  <ul class="menu submenu-container icon-left">
+                    <li><a href="#lineup-container" data-toggle-dia="panel-viernes"><i class="fi-star"></i> Viernes</a></li>
+                    <li><a href="#lineup-container" data-toggle-dia="panel-sabado"><i class="fi-star"></i> Sábado</a></li>
+                    <li><a href="#lineup-container" data-toggle-dia="panel-domingo"><i class="fi-star"></i> Domingo</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#info-container"><i class="fi-info"></i> Info</a>
+                </li>
+                <li>
+                  <a href="#suscribe-container"><i class="fi-at-sign"></i> Suscríbete</a>
+                </li>
               </ul>
-            </li>
-            <li>
-              <a href="#info-container"><i class="fi-info"></i> Info</a>
-            </li>
-            <li>
-              <a href="#suscribe-container"><i class="fi-at-sign"></i> Suscríbete</a>
-            </li>
-          </ul>
-        </nav>
-        
-      </section>
-    <!-- /Menu -->
-
-    <!-- Tickets -->
-      <section id="tickets-action">
-        <div class="callout large text-center">
-          <a href="#">
-            <!-- Por default tiene el color primario definido en foundation. 
-              Con las clases warning, allert, success se puede cambiar tambien el color.
-              Con la clase hollow se invierte la distribucion de colores entre el background y el borde y el color. 
-              Se puede asignar el tamaño de los botones con las clases tiny, small, medium y large.-->
-            <button class="button hollow large">Comprar boletos</button>
-          </a>
+            </nav>
+          <!-- /Menu off canvas -->
+          
         </div>
-      </section>
-    <!-- /Tickets -->
+        <div class="off-canvas-content" data-off-canvas-content> <!-- div donde se coloca todo el contenido visible normalmente del sitio. Requiere la clase off-canvas-content -->
+          <!-- Social -->
+            <section id="social-container">
+              <div class="grid-x align-center text-center">
+                <div class="cell small-1">
+                  <a href="#" target="_blank">
+                    <i class="fi-social-facebook"></i>
+                  </a>
+                </div>
+                <div class="cell small-1">
+                  <a href="#" target="_blank" >
+                    <i class="fi-social-twitter"></i>
+                  </a>
+                </div>
+                <div class="cell small-1">
+                  <a href="#" target="_blank">
+                    <i class="fi-social-instagram"></i>
+                  </a>
+                </div>
+                <div class="cell small-1">
+                  <a href="#" target="_blank">
+                    <i class="fi-social-spotify"></i>
+                  </a>
+                </div>
+              </div>
+            </section>
+          <!-- /Social -->
 
-    <!-- Lineup -->
-      <section id="lineup-container" data-magellan-target="lineup-container"> <!-- data-magellan-target es un atributo para la transicion suave. Su valor debe ser igual al id de la seccion objetivo. -->
-        <h3 class="text-center">Lineup</h3>
-        <ul id="lineup-tabs" class="tabs text-center" data-tabs> <!-- El atributo data-tabs es necesario para trabajar con pestañas en Foundation. Para poder centrar las pestañas tambien hay que quitarles el float.-->
-          <li class="tabs-title is-active"><a href="#panel-viernes">Viernes</a></li> <!-- href debe tener # + el id del panel que se va mostrar al estar activa esa pestaña. Con la clase "is-active se elige la pestaña que esta activa." -->
-          <li class="tabs-title"><a data-tabs-target="panel-sabado" href="#panel-sabado">Sábado</a></li>
-          <li class="tabs-title"><a data-tabs-target="panel-domingo" href="#panel-domingo">Domingo</a></li>
-        </ul> 
-        <div class="tabs-content" data-tabs-content="lineup-tabs"> <!-- data-tabs-content debe tener como valor el id del ul que servira como su menu. -->
-          <div class="tabs-panel is-active" id="panel-viernes"> <!-- Con la clase is-active se elige el panel que esta activo por defecto -->
-            <div class="grid-x grid-margin-x grid-margin-y align-justify">
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/acdc.jpg" alt="AC/DC" />
-                  <figcaption class="orbit-caption">
-                    AC/DC
-                  </figcaption>
+          <!-- Logo -->
+            <section id="logo-container">
+              <div class="callout text-center">
+                <h1>Platzipalooza</h1>
+              </div>
+            </section>
+          <!-- /Logo -->
+
+          <!-- Menu -->
+            <section id="scrollSticky" data-sticky-container>
+              <div class="data-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="menu-container">
+                <nav id="menu-container" data-magellan> <!-- data-magellan es un atributo necesario para hacer la transicion suave a las diferentes secciones desde el menu. -->
+                  <ul class="menu icon-left align-center show-for-small-only"> 
+                    <li>
+                      <a href="#offCanvas" data-toggle="offCanvas"><i class="fi-list"></i> Menu</a> <!-- El atributo data-toggle es necesario para mostrar el contenido off canvas. Su valor es el id del contenedor (en este caso div) que se mostrara off canvas. -->
+                    </li>
+                  </ul>
+                  <ul class="menu icon-left dropdown align-spaced show-for-medium" data-dropdown-menu> <!-- Puedo agregar las clases vertical o simple para cambiar el aspecto del menu. La clase dropdown es para agregar submenus. El atributo data-dropdown-menu es necesario para la implementacion de js en los submenus. -->
+                    <li>
+                      <a href="#tickets-container"><i class="fi-ticket"></i> Tickets</a>
+                    </li>
+                    <li>
+                      <a href="#lineup-container">
+                        <i class="fi-calendar"></i> 
+                        Lineup
+                      </a>
+                      <ul class="menu submenu-container icon-left">
+                        <li><a href="#lineup-container" data-toggle-dia="panel-viernes"><i class="fi-star"></i> Viernes</a></li>
+                        <li><a href="#lineup-container" data-toggle-dia="panel-sabado"><i class="fi-star"></i> Sábado</a></li>
+                        <li><a href="#lineup-container" data-toggle-dia="panel-domingo"><i class="fi-star"></i> Domingo</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#info-container"><i class="fi-info"></i> Info</a>
+                    </li>
+                    <li>
+                      <a href="#suscribe-container"><i class="fi-at-sign"></i> Suscríbete</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </section>
+          <!-- /Menu -->
+
+          <!-- Tickets -->
+            <section id="tickets-action">
+              <div class="callout large text-center" data-magellan>
+                <a href="#tickets-container">
+                  <!-- Por default tiene el color primario definido en foundation. 
+                    Con las clases warning, allert, success se puede cambiar tambien el color.
+                    Con la clase hollow se invierte la distribucion de colores entre el background y el borde y el color. 
+                    Se puede asignar el tamaño de los botones con las clases tiny, small, medium y large.-->
+                  <button class="button hollow large">Comprar boletos</button>
+                </a>
+              </div>
+            </section>
+          <!-- /Tickets -->
+
+          <!-- Lineup -->
+            <section id="lineup-container" data-magellan-target="lineup-container"> <!-- data-magellan-target es un atributo para la transicion suave. Su valor debe ser igual al id de la seccion objetivo. -->
+              <h3 class="text-center">Lineup</h3>
+              <ul id="lineup-tabs" class="tabs text-center" data-tabs> <!-- El atributo data-tabs es necesario para trabajar con pestañas en Foundation. Para poder centrar las pestañas tambien hay que quitarles el float.-->
+                <li class="tabs-title is-active"><a href="#panel-viernes">Viernes</a></li> <!-- href debe tener # + el id del panel que se va mostrar al estar activa esa pestaña. Con la clase "is-active se elige la pestaña que esta activa." -->
+                <li class="tabs-title"><a data-tabs-target="panel-sabado" href="#panel-sabado">Sábado</a></li>
+                <li class="tabs-title"><a data-tabs-target="panel-domingo" href="#panel-domingo">Domingo</a></li>
+              </ul> 
+              <div class="tabs-content" data-tabs-content="lineup-tabs"> <!-- data-tabs-content debe tener como valor el id del ul que servira como su menu. -->
+                <div class="tabs-panel is-active" id="panel-viernes"> <!-- Con la clase is-active se elige el panel que esta activo por defecto -->
+                  <div class="grid-x grid-margin-x grid-margin-y align-justify">
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/acdc.jpg" alt="AC/DC" />
+                        <figcaption class="orbit-caption">
+                          AC/DC
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/ramones.jpg" alt="Ramones" />
+                        <figcaption class="orbit-caption">
+                          Ramones
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/sabath.jpeg" alt="Black Sabath" />
+                        <figcaption class="orbit-caption">
+                          Black Sabath
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/metalica.jpg" alt="Metalica" />
+                        <figcaption class="orbit-caption">
+                            Metalica
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/zepelin.jpg" alt="Led Zepelin" />
+                        <figcaption class="orbit-caption">
+                          Led Zepelin
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/guns.jpg" alt="Guns n Roses" />
+                        <figcaption class="orbit-caption">
+                          Guns n Roses
+                        </figcaption>
+                      </div>
+                    </div>                                                        
+                  </div>
+                </div>
+                <div class="tabs-panel" id="panel-sabado">
+                  <div class="grid-x grid-margin-x grid-margin-y align-justify">
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/beatles.jpg" alt="The Beatles" />
+                        <figcaption class="orbit-caption">
+                          The Beatles
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/beatles.jpg" alt="The Beatles" />
+                        <figcaption class="orbit-caption">
+                          The Beatles
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/beatles.jpg" alt="The Beatles" />
+                        <figcaption class="orbit-caption">
+                          The Beatles
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/beatles.jpg" alt="The Beatles" />
+                        <figcaption class="orbit-caption">
+                          The Beatles
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/beatles.jpg" alt="The Beatles" />
+                        <figcaption class="orbit-caption">
+                          The Beatles
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/beatles.jpg" alt="The Beatles" />
+                        <figcaption class="orbit-caption">
+                          The Beatles
+                        </figcaption>
+                      </div>
+                    </div>                                                        
+                  </div>
+                </div>
+                <div class="tabs-panel" id="panel-domingo">
+                  <div class="grid-x grid-margin-x grid-margin-y align-justify">
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/queen.jpg" alt="AC/DC" />
+                        <figcaption class="orbit-caption">
+                          Queen
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/queen.jpg" alt="Ramones" />
+                        <figcaption class="orbit-caption">
+                          Queen
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/queen.jpg" alt="Black Sabath" />
+                        <figcaption class="orbit-caption">
+                          Queen
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/queen.jpg" alt="Deep Purple" />
+                        <figcaption class="orbit-caption">
+                          Queen
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/queen.jpg" alt="Led Zepelin" />
+                        <figcaption class="orbit-caption">
+                          Queen
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                      <div class="orbit">
+                        <img src="assets/queen.jpg" alt="Queen" />
+                        <figcaption class="orbit-caption">
+                          Queen
+                        </figcaption>
+                      </div>
+                    </div>                                                        
+                  </div>
                 </div>
               </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/ramones.jpg" alt="Ramones" />
-                  <figcaption class="orbit-caption">
-                    Ramones
-                  </figcaption>
+
+            </section>
+          <!-- /Lineup -->
+
+          <!-- Compra de boletos -->
+            <section id="tickets-container" data-magellan-target="tickets-container">
+              <h3 class="text-center">Comprar boletos</h3>
+              <div class="grid-x grid-padding-x" data-equalizer data-equalize-on="small"> <!-- El atributo data-equalizer sirve para igualer el tamaño los ementos hijos indicados con la clase data-equalizer-watch. data-equalize-on sirve para indicar a partir de que tamaño se reliaza la igualacion. -->
+                <div class="cell small-10 small-offset-1 medium-6 medium-offset-3"> <!-- La clase size-offset-# recorre la columna la cantidad de espacios indicados -->
+                  <ul class="pricing-table">
+                    <li class="title">Platino</li>
+                    <li class="price">$119.99</li>
+                    <li class="description">Acceso viernes, sábado y domingo</li>
+                    <li>2 bebidas por cada día</li>
+                    <li>Estacionamiento incluido todos los días</li>
+                    <li>Participa en un sorteo para acceder al backstage</li>
+                    <li><a class="button" href="#">Comprar platino</a></li>
+                  </ul>            
+                </div>
+                <div class="cell secundaria small-6 medium-4 medium-offset-2">
+                  <ul class="pricing-table">
+                    <li class="title">Gold</li>
+                    <li class="price">$89.99</li>
+                    <li class="description">Acceso viernes, sábado y domingo</li>
+                    <li data-equalizer-watch>Incluye 1 bebida para cada día</li>
+                    <li>-</li>
+                    <li>-</li>
+                    <li><a class="button" href="#">Comprar gold</a></li>
+                  </ul>            
+                </div>
+                <div class="cell secundaria small-6 medium-4">
+                  <ul class="pricing-table">
+                    <li class="title">Silver</li>
+                    <li class="price">$64.99</li>
+                    <li class="description">Acceso viernes, sábado y domingo</li>
+                    <li data-equalizer-watch>-</li>
+                    <li>-</li>
+                    <li>-</li>
+                    <li><a class="button" href="#">Comprar silver</a></li>
+                  </ul>            
                 </div>
               </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/sabath.jpeg" alt="Black Sabath" />
-                  <figcaption class="orbit-caption">
-                    Black Sabath
-                  </figcaption>
+            </section>
+          <!-- /Compra de boletos -->
+
+          <!-- Suscripción -->   
+            <section id="suscribe-container" data-magellan-target="suscribe-container">
+              <h3 class="text-center">
+                Suscríbete
+              </h3>
+              <h4 class="text-center">
+                <small>
+                  Y recibe las últimas novedades del concierto
+                </small>
+              </h4>
+              <form action="https://formspree.io/platzipalooza@gmail.com" method="POST" novalidate data-abide> <!-- novalidate es un atributo para que no aparezca el mensaje por defecto del input. data-abide es un atributo para elplugin de foundatio que permite validar los formularios -->
+                <div class="grid-x align-center">
+                  <div class="cell small-12 medium-8 error-container text-center" data-abide-error> <!-- data-abide-error es el atributo para indicar el elemento que se mostrara al ocurrir un error de validacion -->
+                    <p><i class="fi-alert"></i> Ingresó un correo electrónico no válido</p>
+                  </div>
+                  <div class="cell small-12 medium-6">
+                    <div class="input-group"> <!-- input-group es una clase de foundation para colocar los elementos de formulario-->
+                      <span class="input-group-label">
+                        <i class="fi-mail"></i>
+                      </span>
+                      <input type="email" name="email" class="input-group-field" placeholder="tu@correo.com" required>
+                      <div class="input-group-button">
+                        <input type="submit" class="button" value="Suscribirse!">
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/metalica.jpg" alt="Metalica" />
-                  <figcaption class="orbit-caption">
-                      Metalica
-                  </figcaption>
-                </div>
-              </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/zepelin.jpg" alt="Led Zepelin" />
-                  <figcaption class="orbit-caption">
-                    Led Zepelin
-                  </figcaption>
-                </div>
-              </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/guns.jpg" alt="Guns n Roses" />
-                  <figcaption class="orbit-caption">
-                    Guns n Roses
-                  </figcaption>
-                </div>
-              </div>                                                        
-            </div>
-          </div>
-          <div class="tabs-panel" id="panel-sabado">
-            <div class="grid-x grid-margin-x grid-margin-y align-justify">
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/beatles.jpg" alt="The Beatles" />
-                  <figcaption class="orbit-caption">
-                    The Beatles
-                  </figcaption>
-                </div>
-              </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/beatles.jpg" alt="The Beatles" />
-                  <figcaption class="orbit-caption">
-                    The Beatles
-                  </figcaption>
-                </div>
-              </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/beatles.jpg" alt="The Beatles" />
-                  <figcaption class="orbit-caption">
-                    The Beatles
-                  </figcaption>
-                </div>
-              </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/beatles.jpg" alt="The Beatles" />
-                  <figcaption class="orbit-caption">
-                    The Beatles
-                  </figcaption>
-                </div>
-              </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/beatles.jpg" alt="The Beatles" />
-                  <figcaption class="orbit-caption">
-                    The Beatles
-                  </figcaption>
-                </div>
-              </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/beatles.jpg" alt="The Beatles" />
-                  <figcaption class="orbit-caption">
-                    The Beatles
-                  </figcaption>
-                </div>
-              </div>                                                        
-            </div>
-          </div>
-          <div class="tabs-panel" id="panel-domingo">
-            <div class="grid-x grid-margin-x grid-margin-y align-justify">
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/queen.jpg" alt="AC/DC" />
-                  <figcaption class="orbit-caption">
-                    Queen
-                  </figcaption>
-                </div>
-              </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/queen.jpg" alt="Ramones" />
-                  <figcaption class="orbit-caption">
-                    Queen
-                  </figcaption>
-                </div>
-              </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/queen.jpg" alt="Black Sabath" />
-                  <figcaption class="orbit-caption">
-                    Queen
-                  </figcaption>
-                </div>
-              </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/queen.jpg" alt="Deep Purple" />
-                  <figcaption class="orbit-caption">
-                    Queen
-                  </figcaption>
-                </div>
-              </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/queen.jpg" alt="Led Zepelin" />
-                  <figcaption class="orbit-caption">
-                    Queen
-                  </figcaption>
-                </div>
-              </div>
-              <div class="cell small-12 medium-6">
-                <div class="orbit">
-                  <img src="assets/queen.jpg" alt="Queen" />
-                  <figcaption class="orbit-caption">
-                    Queen
-                  </figcaption>
-                </div>
-              </div>                                                        
-            </div>
-          </div>
+              </form>
+
+            </section>
+          <!-- /Suscripción -->
+
+          <!-- Información -->
+            <section id="info-container" data-magellan-target="info-container">
+              <h3 class="text-center">
+                Información
+              </h3>
+              <!-- interchange para imagenes
+              Se las urls de las imagenes que van a aparecer y el tamaño en el que aparecera cada una. 
+              Es importante colocarlas en orden del menor tamaño al mayor. -->
+              <!-- <div class="text-center">
+                <img data-interchange="[assets/ramones.jpg, small],[assets/acdc.jpg, large]"> 
+              </div> -->
+
+              <!-- Interchange para diferentes elementos dependiendo el tamaño del dispositivo.
+              Cada elemento debe estar dentro de un archivo html, el cual sera cargado 
+              de acuerdo al tamaño de la pantalla. 
+              Para que funcione la carga de request embebidos es necesario levantar
+              el sitio en un servidor web-->
+              <div class="info-map text-center" data-interchange="[assets/map-small.html, small],
+              [assets/map.html, medium]"></div>
+
+            </section>
+          <!-- /Información -->
         </div>
-
-      </section>
-    <!-- /Lineup -->
-
-    <!-- Compra de boletos -->
-      <section id="tickets-container" data-magellan-target="tickets-container">
-        <h3 class="text-center">Comprar boletos</h3>
-        <div class="grid-x grid-padding-x" data-equalizer data-equalize-on="small"> <!-- El atributo data-equalizer sirve para igualer el tamaño los ementos hijos indicados con la clase data-equalizer-watch. data-equalize-on sirve para indicar a partir de que tamaño se reliaza la igualacion. -->
-          <div class="cell small-10 small-offset-1 medium-6 medium-offset-3"> <!-- La clase size-offset-# recorre la columna la cantidad de espacios indicados -->
-            <ul class="pricing-table">
-              <li class="title">Platino</li>
-              <li class="price">$119.99</li>
-              <li class="description">Acceso viernes, sábado y domingo</li>
-              <li>2 bebidas por cada día</li>
-              <li>Estacionamiento incluido todos los días</li>
-              <li>Participa en un sorteo para acceder al backstage</li>
-              <li><a class="button" href="#">Comprar platino</a></li>
-            </ul>            
-          </div>
-          <div class="cell secundaria small-6 medium-4 medium-offset-2">
-            <ul class="pricing-table">
-              <li class="title">Gold</li>
-              <li class="price">$89.99</li>
-              <li class="description">Acceso viernes, sábado y domingo</li>
-              <li data-equalizer-watch>Incluye 1 bebida para cada día</li>
-              <li>-</li>
-              <li>-</li>
-              <li><a class="button" href="#">Comprar gold</a></li>
-            </ul>            
-          </div>
-          <div class="cell secundaria small-6 medium-4">
-            <ul class="pricing-table">
-              <li class="title">Silver</li>
-              <li class="price">$64.99</li>
-              <li class="description">Acceso viernes, sábado y domingo</li>
-              <li data-equalizer-watch>-</li>
-              <li>-</li>
-              <li>-</li>
-              <li><a class="button" href="#">Comprar silver</a></li>
-            </ul>            
-          </div>
-        </div>
-      </section>
-    <!-- /Compra de boletos -->
-
-    <!-- Suscripción -->   
-      <section id="suscribe-container" data-magellan-target="suscribe-container">
-        <h3 class="text-center">
-          Suscríbete
-        </h3>
-        <h4 class="text-center">
-          <small>
-            Y recibe las últimas novedades del concierto
-          </small>
-        </h4>
-        <form action="" method="" novalidate data-abide> <!-- novalidate es un atributo para que no aparezca el mensaje por defecto del input. data-abide es un atributo para elplugin de foundatio que permite validar los formularios -->
-          <div class="grid-x align-center">
-            <div class="cell small-12 medium-8 error-container text-center" data-abide-error> <!-- data-abide-error es el atributo para indicar el elemento que se mostrara al ocurrir un error de validacion -->
-              <p><i class="fi-alert"></i> Ingresó un correo electrónico no válido</p>
-            </div>
-            <div class="cell small-12 medium-6">
-              <div class="input-group"> <!-- input-group es una clase de foundation para colocar los elementos de formulario-->
-                <span class="input-group-label">
-                  <i class="fi-mail"></i>
-                </span>
-                <input type="email" name="email" class="input-group-field" placeholder="tu@correo.com" required>
-                <div class="input-group-button">
-                  <input type="submit" class="button" value="Suscribirse!">
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
-
-      </section>
-    <!-- /Suscripción -->
-
-    <!-- Información -->
-      <section id="info-container" data-magellan-target="info-container">
-        <h3 class="text-center">
-          Información
-        </h3>
-        <!-- interchange para imagenes
-        Se las urls de las imagenes que van a aparecer y el tamaño en el que aparecera cada una. 
-        Es importante colocarlas en orden del menor tamaño al mayor. -->
-        <!-- <div class="text-center">
-          <img data-interchange="[assets/ramones.jpg, small],[assets/acdc.jpg, large]"> 
-        </div> -->
-
-        <!-- Interchange para diferentes elementos dependiendo el tamaño del dispositivo.
-        Cada elemento debe estar dentro de un archivo html, el cual sera cargado 
-        de acuerdo al tamaño de la pantalla. 
-        Para que funcione la carga de request embebidos es necesario levantar
-        el sitio en un servidor web-->
-        <div class="info-map text-center" data-interchange="[assets/map-small.html, small],
-        [assets/map.html, medium]"></div>
-
-      </section>
-    <!-- /Información -->
-
+      </div>
+    </div>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
