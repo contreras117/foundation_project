@@ -33,6 +33,10 @@ a:focus{
   background: #1c3636;
 }
 
+#social-container a:hover{
+  color: #f6e15f;
+}
+
 #social-container i{
   font-size: 1.5em;
 }
@@ -102,6 +106,11 @@ a:focus{
   background: inherit;
   color: white;
   outline: none;
+}
+
+#lineup-container .tabs-content .grid-x{
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 #lineup-container .orbit{
